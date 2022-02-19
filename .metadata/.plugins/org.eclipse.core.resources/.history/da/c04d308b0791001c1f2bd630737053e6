@@ -1,0 +1,23 @@
+package com.springboot.reactor.app.models;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Comentarios {
+	
+	
+	public Comentarios() {
+		this.comentarios = new ArrayList<>();
+	}
+	
+	
+
+	public void addComentarios(List<String> comentario) {
+		this.comentarios.add(comentario);
+	}
+
+
+
+	private List<String>comentarios; 
+	
+}

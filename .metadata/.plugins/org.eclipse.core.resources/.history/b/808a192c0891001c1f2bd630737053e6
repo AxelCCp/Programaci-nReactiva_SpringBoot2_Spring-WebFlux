@@ -1,0 +1,8 @@
+package com.springboot.reactor.app.models;
+
+public class UsuarioConComentarios {
+	
+	private Usuario usuario;
+	private Comentarios comentarios;
+	
+}
