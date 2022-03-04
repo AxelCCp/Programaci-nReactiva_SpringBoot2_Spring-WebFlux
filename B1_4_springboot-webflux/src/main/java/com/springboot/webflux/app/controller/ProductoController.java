@@ -1,13 +1,18 @@
 package com.springboot.webflux.app.controller;
 
 import java.time.Duration;
+import java.util.Date;
+
+import javax.validation.Valid;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.SessionAttributes;
@@ -46,6 +51,13 @@ import reactor.core.publisher.Mono;
 //13.1.-SE ELIMINA EL OBJ PRODUCTO DE LA SESSIÓN HTTP.
 //14.-defaultIfEmpty(new Producto()): SI EL PRODUCTO NO SE ENCONTRÓ SEGÚN EL ID QUE SE PASA POR HTTP, ENTREGA UN FORMULARIO VACÍO QUE PERMITE CREAR EL PRODUCTO. DE ESTA MANERA SE EVITA UN ERROR.
 //15.-OTRO METODO EDITAR MÁS REACTIVO.
+//16.-@VALID:  LE DICE A SPRING QUE TIENE QUE VALIDAR SEGÚN LAS ANOTACIONES QUE SE PUSIERON EN LA CLASE ENTITY PRODUCTO.
+//16.1.-SE PREGUNTA SI SE PRODUJERON ERRORES EN LA VALIDACIÓN CON BINDING RESULT. BindingResult result : ALMACENA INFORMACIÓN DE ERRORES QUE PUEDAN HABER.
+//16.2.-SI HAY ERRORES TE DEVUELVE A LA VISTA DEL FORMULARIO.
+//17.-SE ASIGNA UNA FECHA POR DEFECTO SI ES QUE ESTA ES NULA.
+//18.-MÉTODO ELIMINAR
+//19.-METODO EDITAR MÁS REACTIVO 
+//20.-@ModelAttribute("producto") SE PASA EL ATRIBUTO PRODUCTO DESDE EL MÉTODO EDITAR AL METODO GUARDAR, SI ES QUE HAY ERRORES, PARA SE USADO EN CASO DE ERROR.
 
 @SessionAttributes("producto")  //13 ...producto HACE REFERENCIA A LA PALABRA "producto" DEL MÉTODO CREAR y EDITAR.
 @Controller
@@ -70,13 +82,26 @@ public class ProductoController {
 		return Mono.just("form");
 	}
 	//11
-	@PostMapping("/form")                                       //13.1
-	public Mono<String>guardar(Producto producto, SessionStatus status){
-		//13.1
-		status.setComplete();
-		return productoService.save(producto).doOnNext(p-> {
-			log.info("Producto guardado: " + p.getNombre() + "...Id: " + p.getId());
-		}).thenReturn("redirect:/listar");
+	@PostMapping("/form")       //16           //20                     //16.1                //16.2                         //13.1
+	public Mono<String>guardar(@Valid @ModelAttribute("producto") Producto producto, BindingResult result, Model model, SessionStatus status){
+		//16.1    //16.2
+		if(result.hasErrors()) {
+			model.addAttribute("titulo","Errores en el formulario de productos");
+			model.addAttribute("boton","guardar");
+			return Mono.just("form");
+		}else {
+			//13.1
+			status.setComplete();
+			
+			//17
+			if(producto.getCreateAt()==null) {
+				producto.setCreateAt(new Date());
+			}
+			
+			return productoService.save(producto).doOnNext(p-> {
+				log.info("Producto guardado: " + p.getNombre() + "...Id: " + p.getId());
+			}).thenReturn("redirect:/listar");
+		}
 	}
 	//12
 	@GetMapping("/form/{id}")
@@ -89,7 +114,46 @@ public class ProductoController {
 		model.addAttribute("boton","editar");
 		return Mono.just("form");
 	}
+	//19
+	@GetMapping("/form2/{id}")
+	public Mono<String>editar2(@PathVariable String id, Model model){
+		return productoService.findById(id).doOnNext(p-> {	
+			log.info("Producto: " + p.getNombre());
+			model.addAttribute("titulo","Editar producto");
+			model.addAttribute("boton","editar");
+			model.addAttribute("producto",p);
+		}).defaultIfEmpty(new Producto())
+				.flatMap(p->{
+					if(p.getId()==null) {
+						return Mono.error(new InterruptedException("No existe el producto"));
+					}
+					return Mono.just(p);
+				})
+				.then(Mono.just("form"))
+				.onErrorResume(ex-> Mono.just("redirect:/listar?error=no+existe+el+producto"));		
+	}
 	
+	//18
+	@GetMapping("/eliminar/{id}")
+	public Mono<String> eliminar(@PathVariable String id){
+		return productoService.findById(id)
+				
+				//POR SI ES QUE EL PRODUCTO A ELIMINAR NO EXISTE.	
+				.defaultIfEmpty(new Producto())
+				.flatMap(p->{
+					if(p.getId()==null) {
+						return Mono.error(new InterruptedException("No existe el producto a eliminar"));
+					}
+					return Mono.just(p);
+				})
+				
+				.flatMap(p-> {
+					log.info("Eliminando el producto: " + p.getNombre());
+					log.info("Eliminando el producto Id: " + p.getId());
+			return productoService.delete(p);
+		}).then(Mono.just("redirect:/listar?success=producto+eliminado+con+exito"))
+		.onErrorResume(ex-> Mono.just("redirect:/listar?error=no+existe+el+producto+a+eliminar"));		
+	}
 	
 	//3
 	@GetMapping("/listar-dataDriver")

@@ -11,6 +11,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.data.mongodb.core.ReactiveMongoTemplate;
 
 import com.springboot.webflux.app.models.dao.IProductoDao;
+import com.springboot.webflux.app.models.documents.Categoria;
 import com.springboot.webflux.app.models.documents.Producto;
 
 import reactor.core.publisher.Flux;
@@ -23,6 +24,8 @@ import reactor.core.publisher.Flux;
 //3.-PARA BORRAR LA COLECCIÓN CADA VEZ QUE SE ECHE A ANDAR AL APP.
 //CLASE33
 //4.-SE PONE LA FECHA.
+//CLASE51
+//5.-CATEGORIAS         ***           //CATEGORIAS LO IMPLEMENTO EN LA SIGUIENTE VERSIÓN DEL PROYECTO...
 
 @SpringBootApplication
 public class SpringbootWebfluxApplication implements CommandLineRunner {
@@ -36,6 +39,18 @@ public class SpringbootWebfluxApplication implements CommandLineRunner {
 	public void run(String... args) throws Exception {
 		//3
 		mongoTemplate.dropCollection("productos").subscribe();
+		
+		/*
+		//5
+		mongoTemplate.dropCollection("categorias").subscribe();
+		//5.1
+		Categoria electronico = new Categoria("Electrónico");
+		Categoria deporte = new Categoria("Deporte");
+		Categoria computacion = new Categoria("Computación");
+		Categoria muebles = new Categoria("Muebles");
+		*/
+		
+		
 		//1.1
 		Flux.just(new Producto("TV panasonic LCD",234.23),
 				new Producto("Camara Sony Digital HD",256.23),
