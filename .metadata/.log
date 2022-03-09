@@ -5510,3 +5510,276 @@ java.util.concurrent.TimeoutException
 
 !ENTRY org.eclipse.ui 2 2 2022-03-08 22:22:36.734
 !MESSAGE Invalid property category path: org.springframework.ide.eclipse.beans.ui.properties.ProjectPropertyPage (bundle: org.springframework.ide.eclipse.xml.namespaces, propertyPage: org.springframework.ide.eclipse.beans.ui.namespaces.projectPropertyPage)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-08 22:35:23.941
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.lOMhfIuZ
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-08 22:35:23.941
+!MESSAGE unsubscribing from classpath changes: sts4.classpath.lOMhfIuZ
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-08 22:35:23.942
+!MESSAGE subsribers = {}
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-08 22:35:23.942
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.lOMhfIuZ => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-08 22:40:05.992
+!MESSAGE Entering DelegatingStreamConnectionProvider()
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-08 22:40:05.992
+!MESSAGE DelegatingStreamConnectionProvider classloader = org.eclipse.osgi.internal.loader.EquinoxClassLoader@19b39c08[org.springframework.tooling.boot.ls:1.29.0.202112031705(id=564)]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-08 22:40:05.993
+!MESSAGE SpringBootLanguageServer exists!
+
+!ENTRY org.eclipse.jface 2 0 2022-03-08 22:40:06.051
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2022-03-08 22:40:06.051
+!MESSAGE A conflict occurred for CTRL+SHIFT+C:
+Binding(CTRL+SHIFT+C,
+	ParameterizedCommand(Command(org.eclipse.tm4e.languageconfiguration.togglelinecommentcommand,Toggle Line Comment,
+		,
+		Category(org.eclipse.tm4e.languageconfiguration.category,TM4E Language Configuration,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@237ab619,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)
+Binding(CTRL+SHIFT+C,
+	ParameterizedCommand(Command(org.springframework.tooling.boot.ls.ToggleComment,Toggle Comment,
+		,
+		Category(org.springframework.ide.eclipse.commands,Spring Generic Text Editor,Spring Language Server Commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@76c0ae7d,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-08 22:40:07.211
+!MESSAGE Boot LS startup time from start to initialized: 1218ms
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-08 22:40:07.258
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.MCaLcckuisBatched = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-08 22:40:07.259
+!MESSAGE Setting up ClasspathListenerManager
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-08 22:40:07.259
+!MESSAGE Scheduling initial event for all projects ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-08 22:40:07.259
+!MESSAGE Scheduling initial event for all projects DONE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-08 22:40:07.259
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-08 22:40:07.260
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.MCaLccku => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-08 22:40:07.267
+!MESSAGE classpath=100 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-08 22:40:07.270
+!MESSAGE buffering callback sts4.classpath.MCaLccku C1_6_springboot-webflux-apirest false 100
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-08 22:40:07.270
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-08 22:40:07.272
+!MESSAGE classpath=54 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-08 22:40:07.274
+!MESSAGE buffering callback sts4.classpath.MCaLccku A1_2_springboot-reactor false 54
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-08 22:40:07.274
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-08 22:40:07.276
+!MESSAGE classpath=54 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-08 22:40:07.277
+!MESSAGE buffering callback sts4.classpath.MCaLccku A2_2_springboot-reactor false 54
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-08 22:40:07.277
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-08 22:40:07.279
+!MESSAGE classpath=54 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-08 22:40:07.280
+!MESSAGE buffering callback sts4.classpath.MCaLccku A3_2_springboot-reactor false 54
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-08 22:40:07.281
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-08 22:40:07.285
+!MESSAGE classpath=100 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-08 22:40:07.287
+!MESSAGE buffering callback sts4.classpath.MCaLccku B0_3_springboot-webflux false 100
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-08 22:40:07.287
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-08 22:40:07.291
+!MESSAGE classpath=106 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-08 22:40:07.294
+!MESSAGE buffering callback sts4.classpath.MCaLccku B1_4_springboot-webflux false 106
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-08 22:40:07.294
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-08 22:40:07.297
+!MESSAGE classpath=106 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-08 22:40:07.300
+!MESSAGE buffering callback sts4.classpath.MCaLccku B2_4_springboot-webflux false 106
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-08 22:40:07.300
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-08 22:40:07.303
+!MESSAGE classpath=106 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-08 22:40:07.306
+!MESSAGE buffering callback sts4.classpath.MCaLccku B3_4_springboot-webflux false 106
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-08 22:40:07.306
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-08 22:40:07.309
+!MESSAGE classpath=100 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-08 22:40:07.312
+!MESSAGE buffering callback sts4.classpath.MCaLccku C0_5_springboot-webflux-apirest false 100
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-08 22:40:07.312
+!MESSAGE executing callback sts4.classpath.MCaLccku 9 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-08 22:40:07.622
+!MESSAGE executing callback sts4.classpath.MCaLccku SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-08 22:40:58.363
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.MCaLccku
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-08 22:40:58.364
+!MESSAGE unsubscribing from classpath changes: sts4.classpath.MCaLccku
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-08 22:40:58.364
+!MESSAGE subsribers = {}
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-08 22:40:58.364
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.MCaLccku => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-08 22:41:00.714
+!MESSAGE Entering DelegatingStreamConnectionProvider()
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-08 22:41:00.715
+!MESSAGE DelegatingStreamConnectionProvider classloader = org.eclipse.osgi.internal.loader.EquinoxClassLoader@19b39c08[org.springframework.tooling.boot.ls:1.29.0.202112031705(id=564)]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-08 22:41:00.715
+!MESSAGE SpringBootLanguageServer exists!
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-08 22:41:01.930
+!MESSAGE Boot LS startup time from start to initialized: 1214ms
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-08 22:41:01.978
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.KtzWCpDlisBatched = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-08 22:41:01.978
+!MESSAGE Setting up ClasspathListenerManager
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-08 22:41:01.978
+!MESSAGE Scheduling initial event for all projects ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-08 22:41:01.979
+!MESSAGE Scheduling initial event for all projects DONE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-08 22:41:01.979
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-08 22:41:01.979
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.KtzWCpDl => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-08 22:41:01.982
+!MESSAGE classpath=100 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-08 22:41:01.985
+!MESSAGE buffering callback sts4.classpath.KtzWCpDl C1_6_springboot-webflux-apirest false 100
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-08 22:41:01.985
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-08 22:41:01.987
+!MESSAGE classpath=54 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-08 22:41:01.988
+!MESSAGE buffering callback sts4.classpath.KtzWCpDl A1_2_springboot-reactor false 54
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-08 22:41:01.989
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-08 22:41:01.990
+!MESSAGE classpath=54 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-08 22:41:01.992
+!MESSAGE buffering callback sts4.classpath.KtzWCpDl A2_2_springboot-reactor false 54
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-08 22:41:01.992
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-08 22:41:01.994
+!MESSAGE classpath=54 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-08 22:41:01.995
+!MESSAGE buffering callback sts4.classpath.KtzWCpDl A3_2_springboot-reactor false 54
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-08 22:41:01.996
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-08 22:41:01.998
+!MESSAGE classpath=100 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-08 22:41:02.001
+!MESSAGE buffering callback sts4.classpath.KtzWCpDl B0_3_springboot-webflux false 100
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-08 22:41:02.001
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-08 22:41:02.004
+!MESSAGE classpath=106 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-08 22:41:02.007
+!MESSAGE buffering callback sts4.classpath.KtzWCpDl B1_4_springboot-webflux false 106
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-08 22:41:02.007
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-08 22:41:02.011
+!MESSAGE classpath=106 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-08 22:41:02.013
+!MESSAGE buffering callback sts4.classpath.KtzWCpDl B2_4_springboot-webflux false 106
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-08 22:41:02.013
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-08 22:41:02.016
+!MESSAGE classpath=106 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-08 22:41:02.019
+!MESSAGE buffering callback sts4.classpath.KtzWCpDl B3_4_springboot-webflux false 106
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-08 22:41:02.019
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-08 22:41:02.022
+!MESSAGE classpath=100 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-08 22:41:02.025
+!MESSAGE buffering callback sts4.classpath.KtzWCpDl C0_5_springboot-webflux-apirest false 100
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-08 22:41:02.025
+!MESSAGE executing callback sts4.classpath.KtzWCpDl 9 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-03-08 22:41:02.332
+!MESSAGE executing callback sts4.classpath.KtzWCpDl SUCCESS [done]
